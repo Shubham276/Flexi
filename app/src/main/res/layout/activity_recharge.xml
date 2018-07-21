@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad"
+    android:orientation="vertical"
+    tools:context="india.com.flexi.Activity.RechargeActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/mainLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </LinearLayout>
+
+
+    <TableLayout
+        android:id="@+id/tabMain"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_person_black_24dp"
+                android:layout_weight="0"/>
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:hint="Name"
+                android:maxLength="35"
+                android:inputType="text"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="#ffffff"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_contact_phone_black_24dp"
+                android:layout_weight="0"/>
+
+            <EditText
+                android:id="@+id/phone_edit_txt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/name_edit_txt"
+                android:imeOptions="actionDone"
+                android:background="#ffffff"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:layout_weight="1"/>
+
+            <!--<Button-->
+                <!--android:id="@+id/verify"-->
+                <!--android:text="Verify OTP"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="15sp"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:background="@drawable/buttonshape1"-->
+                <!--android:shadowColor="#6CA4B8"-->
+                <!--android:shadowDx="0"-->
+                <!--android:shadowDy="0"-->
+                <!--android:shadowRadius="3"-->
+
+                <!--android:layout_below="@+id/name_edit_txt"-->
+                <!--android:layout_alignEnd="@+id/phone_edit_txt" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/Operator"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_signal_cellular_connected_no_internet_4_bar_black_24dp"
+                android:layout_weight="0"/>
+            <Spinner
+                android:id="@+id/operatorSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight=".35"
+                android:background="#ffffff"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/layoutCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_add_circle_black_24dp"
+                android:layout_weight="0"/>
+
+            <Spinner
+                android:id="@+id/circleSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight=".35"
+                android:background="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_attach_money_black_24dp"
+                android:layout_weight="0"/>
+            <EditText
+                android:id="@+id/userAmount"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:hint="Amount"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textSize="20sp"
+                android:background="#ffffff"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radio_grp_prepost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_btn_prepaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Prepaid"
+                    android:checked="true"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/radio_btn_postpaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Postpaid" />
+            </RadioGroup>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/rechargeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECHARGE"
+                android:background="#125d79"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </TableLayout>
+
+</LinearLayout>
